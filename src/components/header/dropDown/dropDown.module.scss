@@ -1,0 +1,26 @@
+.dropDownBackdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  z-index: 0;
+}
+.dropDown {
+  position: absolute;
+  transition: all 0.3s ease;
+  z-index: 60;
+  overflow: hidden;
+  
+}
+.dropDownActive {
+  opacity: 1;
+}
+.dropDownInactive {
+  opacity: 0;
+  height: 0;
+}
+.dropDownWrapper {
+  position: relative;
+}

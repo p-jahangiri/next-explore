@@ -1,0 +1,84 @@
+@import "assets/styles/base.scss";
+
+.navbar {
+  @include justify-between;
+  background-color: $color-light-gray;
+  height: 4rem;
+  width: 100%;
+  padding: 8px 2.8rem;
+  border-bottom: 1px solid $color-gainsboro;
+}
+.navbarLeft {
+  @include align-items;
+  cursor: pointer;
+  :nth-child(2) {
+    margin: 0 25px 0 15px;
+  }
+  :nth-child(4) {
+    margin: 0 20px;
+  }
+}
+.btnUpload {
+  @include align-items;
+  color: $color-orange;
+  width: 8.1rem;
+  height: 40px;
+  border-radius: 5px;
+  padding: 10px 15px;
+  cursor: pointer;
+  border: 2px solid $color-orange;
+  :nth-child(2) {
+    margin-right: 0.6rem;
+  }
+}
+
+.navbarRight {
+  display: flex;
+  flex-direction: row-reverse;
+}
+.navbarRightMobil {
+  display: none
+}
+.navbarItem {
+  @include justify-between;
+  align-items: center;
+  color: $color-white;
+  padding: 0 1.1rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+  :nth-child(1) {
+    color: $color-orange;
+  }
+  h3 {
+    flex-wrap: nowrap;
+    margin: 0 0.8rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    padding: 4px 0.8rem;
+  }
+  .navbarLeft {
+    :nth-child(2) {
+      margin: 0 13px 0 6px;
+    }
+    :nth-child(3) {
+      margin: 0 4px;
+    }
+  }
+  .btnUpload {
+    display: none
+  }
+  .navbarRight {
+    display: none;
+  }
+  .navbarRightMobil {
+    display: flex;
+    align-items: center;
+    :nth-child(1) {
+      margin: 0 15px;
+    }
+  }
+}
+

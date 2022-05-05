@@ -1,0 +1,62 @@
+
+
+
+$color-white: #ffffff;
+$color-orange: #f85a2f;
+$color-gainsboro: #707070;
+$color-light-gray: #2c3640;
+$color-silver: #303C4A;
+$color-dark-gray: #232d37;
+$color-gray: #1C242B;
+@mixin justify-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@mixin align-items {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@mixin justify-align-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@mixin arrow-filterBar {
+  position: absolute;
+  margin-right: 100px;
+  fill: white;
+  z-index: 1;
+}
+@mixin container-select-box {
+  justify-content: space-between;
+  // z-index: 1;
+  width: 13rem;
+  height: 55px;
+  border-radius: 10px;
+}
+@mixin select-box{
+  // z-index: 1;
+  width: 12rem;
+  height: 55px;
+  border-radius: 10px;
+}
+@mixin select-box-none {
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+}
+
+@mixin icon-menu-filter {
+  width: 30px;
+  height: 30px;
+  font-size: 100px;
+  padding: 0 8px;
+  fill: $color-white;
+  background-color: #47576A;
+}
+
+
+
