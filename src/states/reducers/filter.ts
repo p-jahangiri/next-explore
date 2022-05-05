@@ -1,8 +1,8 @@
+import { getProjectsByThunk } from "./../thunks/index";
 import { createSlice } from "@reduxjs/toolkit";
-import thunk from 'redux-thunk'
 
 export const filter = createSlice({
-  name: "filter",
+  name: "projects",
   initialState: {
     viewMode: "grid" as "grid" | "list",
   },

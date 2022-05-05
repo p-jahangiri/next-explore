@@ -7,21 +7,22 @@ import Profile from "assets/svg/profileImg.svg";
 import { ResponseGetProjectsDataType } from "components/gate/inerface/projects.interface";
 import gate from "components/gate";
 import Card, { CardGrid } from "./card";
+import { useDispatch, useSelector } from "react-redux";
+import { getIsLoading, getProjects } from "states/selectors/filter";
+import { getProjectsByThunk } from "states/thunks";
+import { AppDispatch } from "states";
 
 export default function Section() {
-  const [projects, setProjects] = useState<ResponseGetProjectsDataType[]>();
-  async function getProjects() {
-    try {
-      const result = await gate.getProjects();
-      setProjects(result);
-    } catch (error) {
-      console.log(error);
-    }
-  }
+  const projects = useSelector(getProjects);
+  const isLoading = useSelector(getIsLoading);
+  const dispatch = useDispatch<AppDispatch>();
   useEffect(() => {
-    getProjects();
-  }, []);
+    dispatch(getProjectsByThunk());
+  }, [dispatch]);
 
+  if (isLoading) {
+    return <div>Loading...</div>;
+  }
   return (
     <>
       <div className={s.desktop}>
