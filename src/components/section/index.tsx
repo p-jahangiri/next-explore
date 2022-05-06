@@ -29,7 +29,6 @@ export default function Section() {
   }
   return (
     <>
-     
       <div className={s.desktop}>
         {projects?.map((project) => (
           <div key={project.id}>
