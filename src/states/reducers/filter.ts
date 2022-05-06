@@ -7,8 +7,8 @@ export const filter = createSlice({
     viewMode: "grid" as "grid" | "list",
   },
   reducers: {
-    toggleMode: (state) => {
-      state.viewMode = state.viewMode === "grid" ? "list" : "grid";
+    toggleMode: (state, action) => {
+      state.viewMode = action.payload;
     },
   },
 });

@@ -1,4 +1,4 @@
-import { MouseEvent, useState } from "react";
+import { useState } from "react";
 import { SliderData } from "static";
 import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
@@ -13,10 +13,17 @@ export default function Slider() {
   const [openMenu, setOpenMenu] = useState(false);
   const [currentSlide, setCurrentSlide] = useState(0);
   const [loaded, setLoaded] = useState(false);
+
   const [sliderRef, instanceRef] = useKeenSlider<HTMLDivElement>({
     initial: 0,
     slideChanged(slider) {
       setCurrentSlide(slider.track.details.rel);
+    },
+    breakpoints: {
+      "(max-width: 1500px)": { slides: { perView: 7, spacing: 20 } },
+      "(max-width: 1300px)": { slides: { perView: 6, spacing: 20 } },
+      "(max-width: 1100px)": { slides: { perView: 5, spacing: 20 } },
+      "(max-width: 900px)": { slides: { perView: 4, spacing: 20 } },
     },
     slides: { perView: 8, spacing: 20 },
     created() {
@@ -24,15 +31,11 @@ export default function Slider() {
     },
   });
 
-
   return (
     <>
       <div className={s.wrapper}>
         <div className={s.keen}>
-          <div
-            ref={sliderRef}
-            className="keen-slider"
-          >
+          <div ref={sliderRef} className="keen-slider">
             {SliderData.map((slide, index: number) => {
               return (
                 <div
@@ -83,7 +86,7 @@ export default function Slider() {
         </div>
         {openMenu && (
           <div className={s.menuSlider}>
-            <p>همه دسته بندی ها</p>
+            <h6>همه دسته بندی ها</h6>
             <div className={s.menuItem}>
               {SliderData.map((slide, index: number) => {
                 return (

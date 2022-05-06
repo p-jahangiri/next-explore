@@ -11,8 +11,9 @@
   align-items: center;
   background-color: #707070;
 
-  h3 {
-    margin-right: 40px;
+  h5 {
+    margin-right: 2.8rem;
+    font-size: 15px;
     color: white;
     cursor: pointer;
   }
@@ -30,7 +31,7 @@
   justify-content: center;
   direction: rtl;
   color: white;
-  h4 {
+  p {
     line-height: 1.6;
     letter-spacing: 1.5px;
   }
@@ -47,6 +48,10 @@
     background-color: transparent;
     flex-wrap: wrap;
     margin-right: -110px;
+
+    h5 {
+      font-size: 12px;
+    }
   }
   .logo {
     display: flex;
@@ -56,16 +61,16 @@
     }
   }
   .text {
-    flex-direction: rtl;
-    h4 {
-      line-height: 0;
-      letter-spacing: 0x;
+    margin-top: 10px;
+    display: flex;
+    p {
+      font-size: 7px;
     }
   }
 }
 @media screen and (max-width: 576px) {
   .contact {
-   padding-top: 20px;
+    padding-top: 20px;
     h3 {
       font-size: 17px;
     }

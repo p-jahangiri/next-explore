@@ -7,12 +7,12 @@ interface CardSliderProps {
     className?: string;
 }
 
-const  CardSlider:React.FC<CardSliderProps> = ({title,img ,className}) =>{
+const  CardSlider:React.FC<CardSliderProps> = ({title,img }) =>{
   console.log(img)
   return (
-    <div className={clsx(s.slider,className)}>
+    <div className={clsx(s.slider)}>
         {img && <img src={img} alt="img"/>}
-        {title && <h3>{title}</h3>}
+        {title && <h5>{title}</h5>}
     </div>
   )
 }

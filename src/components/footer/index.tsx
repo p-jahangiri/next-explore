@@ -11,9 +11,9 @@ export default function Footer() {
         <img src="./logo.png" alt="img" />
       </div>
       <div className={s.text}>
-        <h4>
+        <p>
           کلیه حقوق برای وبسایت CGnation محفوظ است 1400
-        </h4>
+        </p>
       </div>
     </div>
   );

@@ -8,9 +8,11 @@
   align-items: center;
   background-color: #1c242b;
   color: white;
-  width: 8.5rem;
+  width: 10rem;
   height: 2rem;
   border-radius: 5px;
+  white-space: nowrap;
+  font-size: 12px;
 }
 .icon {
   fill: white;
@@ -30,6 +32,7 @@
     width: 13rem;
     height: 3rem;
     border-radius: 5px;
+  
   }
   .icon {
     margin-right: 20px;
@@ -37,7 +40,6 @@
   .dropDown {
     direction: rtl;
     padding: 20px 100px 10px 30px;
-
     white-space: nowrap;
   }
 }

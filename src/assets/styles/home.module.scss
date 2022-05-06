@@ -1,8 +1,15 @@
-@import 'assets/styles/base.scss';
+@import "assets/styles/base.scss";
+
+@font-face {
+  font-family: "iransans";
+  src: url("../fonts/FontsFree-Net-ir_sans.ttf");
+}
 .body {
   width: 100%;
   height: auto;
   background-color: $color-light-gray;
+  font-family: iransans;
+  overflow: hidden;
 }
 // .container {
 //   padding: 0 2.8rem;

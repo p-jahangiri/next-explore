@@ -1,12 +1,11 @@
 .container {
-  direction: ltr;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   margin-bottom: 15px;
   img {
     width: 100%;
-    max-width: 28rem;
+    
     height: auto;
     border-radius: 15px;
   }
@@ -18,9 +17,9 @@
   margin-top: 10px;
   width: 100%;
   max-width: 28rem;
-  span {
-    color: #707070;
-  }
+span {
+  color: #707070;
+}
 }
 
 .eay {
@@ -32,11 +31,13 @@
 }
 .like {
   cursor: pointer;
-
+ 
   span {
     margin: 0 10px;
+    
   }
 }
+
 
 .user {
   display: flex;

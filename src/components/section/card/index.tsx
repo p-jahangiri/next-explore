@@ -8,46 +8,49 @@ import { useSelector } from "react-redux";
 import { getViewMode } from "states/selectors/filter";
 import { ResponseGetProjectsDataType } from "components/gate/inerface/projects.interface";
 
-export default function CardList({
+export default function Card({
   project,
 }: {
   project: ResponseGetProjectsDataType;
 }) {
-  const viewMode = useSelector(getViewMode);
-  if (viewMode === "list") {
-    return (
-      <div className={s.container}>
-        <img src="./book.png" alt="book" />
-        <div className={s.itemCard}>
-          <div>
-            <Eay />
-            <span>{project.count_visit}</span>
-          </div>
-          <div className={s.like}>
-            <Like />
-            <span>{project.count_like}</span>
-          </div>
-          <div className={s.user}>
-            <p>{project?.user?.first_name + " " + project?.user?.last_name}</p>
-            <Profile />
-          </div>
+  // const viewMode = useSelector(getViewMode);
+  // if (viewMode === "list") {
+  return (
+    <div className={s.container}>
+      <img src="./book.png" alt="book" />
+      <div className={s.itemCard}>
+        <div className={s.eay}>
+          <Eay/>
+          <span>{project.count_visit}</span>
+        </div>
+        <div className={s.like}>
+          <Like />
+          <span>{project.count_like}</span>
+        </div>
+        <div className={s.user}>
+          <span>
+            {project?.user?.first_name ? project?.user?.first_name : "پرویز"}{" "}
+            {project?.user?.last_name ? project?.user?.last_name : "جهانگیری"}
+          </span>
+          <Profile />
         </div>
       </div>
-    );
-  }
+    </div>
+  );
 }
+// }
 
-export  function CardGrid({
-  project,
-}: {
-  project: ResponseGetProjectsDataType;
-}) {
-  const viewMode = useSelector(getViewMode);
-  if (viewMode === "grid") {
-    return (
-      <div className={s.grid}>
-        <img src="./book.png" alt="book" />
-      </div>
-    );
-  }
-}
+// export  function CardGrid({
+//   project,
+// }: {
+//   project: ResponseGetProjectsDataType;
+// }) {
+//   const viewMode = useSelector(getViewMode);
+//   if (viewMode === "grid") {
+//     return (
+//       <div className={s.grid}>
+//         <img src="./book.png" alt="book" />
+//       </div>
+//     );
+//   }
+// }

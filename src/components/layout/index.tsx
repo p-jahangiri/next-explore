@@ -10,7 +10,7 @@ interface layoutProp {
   footer: boolean | ReactNode;
   header: boolean | ReactNode;
 }
-function Layout({ children, footer, header }: layoutProp) {
+export function Layout({ children, footer, header }: layoutProp) {
   return (
     <div className={s.body}>
       <Head>
@@ -24,12 +24,5 @@ function Layout({ children, footer, header }: layoutProp) {
         {typeof footer == "boolean" ? footer && <Footer /> : footer}
       </div>
     </div>
-  );
-}
-export default function Home() {
-  return (
-    <Layout footer={<Footer />} header={<Header />}>
-      <Section />
-    </Layout>
   );
 }

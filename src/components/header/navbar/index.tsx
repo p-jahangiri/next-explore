@@ -17,10 +17,10 @@ const Navbar: React.FC<NavbarProps> = () => {
   return (
     <div className={s.navbar}>
       <div className={s.navbarLeft}>
-        <Arrow fill="#232d37"/>
-        <ProfileImg />
-        <Alarm />
-        <Massage />
+        <Arrow className={s.iconArrow}/>
+        <ProfileImg className={s.iconProfile}/>
+        <Alarm className={s.iconAlarm}/>
+        <Massage className={s.iconMassage}/>
         <div className={s.btnUpload}>
           <h5>آپلود پروژه</h5>
           <Upload />
@@ -32,7 +32,7 @@ const Navbar: React.FC<NavbarProps> = () => {
           return (
             <div key={index} className={s.navbarItem}>
               {item.icon && <item.icon />}
-              {item.title && <h3>{item.title}</h3>}
+              {item.title && <h5>{item.title}</h5>}
             </div>
           );
         })}

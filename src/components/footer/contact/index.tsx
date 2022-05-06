@@ -4,11 +4,11 @@ import s from "../footer.module.scss";
 export default function Contact() {
   return (
     <div className={s.contact}>
-      <h3>تماس با ما</h3>
-      <h3>ارتباط با ما </h3>
-      <h3>قوانین</h3>
-      <h3>پرسش های متداول</h3>
-      <h3>حریم خصوصی</h3>
+      <h5>تماس با ما</h5>
+      <h5>ارتباط با ما </h5>
+      <h5>قوانین</h5>
+      <h5>پرسش های متداول</h5>
+      <h5>حریم خصوصی</h5>
     </div>
   );
 }

@@ -6,10 +6,9 @@ import MenuTowIcon from "assets/svg/menu-tow-icon.svg";
 import MenuFourIcon from "assets/svg/menu-four-icon.svg";
 import s from "./filter.module.scss";
 import { useRouter } from "next/router";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { toggleMode } from "states/reducers/filter";
 const FilterBar: React.FC = () => {
-
   const router = useRouter();
   const dispatch = useDispatch();
 
@@ -26,11 +25,9 @@ const FilterBar: React.FC = () => {
     });
   }
 
-  function toggleViewMode() {
-    dispatch(toggleMode());
+  function toggleViewMode(mode: "list" | "grid") {
+  return  () => dispatch(toggleMode(mode));
   }
-  console.log(toggleViewMode);
-  
 
   return (
     <>
@@ -50,9 +47,15 @@ const FilterBar: React.FC = () => {
           </div>
           <div className={s.menuBox}>
             <ArrowTop className={s.menuArrowTop} />
-            <MenuFourIcon className={s.menuMenuFourIcon} onClick={toggleViewMode}/>
+            <MenuFourIcon
+              className={s.menuMenuFourIcon}
+              onClick={toggleViewMode("list")}
+            />
             <Arrow className={s.menuArrow} />
-            <MenuTowIcon className={s.menuMenuTowIcon} onClick={toggleViewMode}/>
+            <MenuTowIcon
+              className={s.menuMenuTowIcon}
+              onClick={toggleViewMode("grid")}
+            />
           </div>
         </div>
         <div className={s.filterBarRight}>

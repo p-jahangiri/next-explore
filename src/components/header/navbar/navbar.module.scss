@@ -11,10 +11,15 @@
 .navbarLeft {
   @include align-items;
   cursor: pointer;
-  :nth-child(2) {
+  .iconArrow {
+    fill: $color-gainsboro;
+  }
+  .iconProfile {
     margin: 0 25px 0 15px;
   }
-  :nth-child(4) {
+  // .iconAlarm {
+  // }
+  .iconMassage {
     margin: 0 20px;
   }
 }
@@ -24,12 +29,12 @@
   width: 8.1rem;
   height: 40px;
   border-radius: 5px;
-  padding: 10px 15px;
+  padding: 10px 10px;
   cursor: pointer;
   border: 2px solid $color-orange;
-  :nth-child(2) {
-    margin-right: 0.6rem;
-  }
+ h5{
+   font-size: 11px;
+ }
 }
 
 .navbarRight {
@@ -37,7 +42,7 @@
   flex-direction: row-reverse;
 }
 .navbarRightMobil {
-  display: none
+  display: none;
 }
 .navbarItem {
   @include justify-between;
@@ -49,18 +54,27 @@
   :nth-child(1) {
     color: $color-orange;
   }
-  h3 {
+  h5 {
     flex-wrap: nowrap;
     margin: 0 0.8rem;
   }
 }
-
+@media  screen and (max-width: 1150px) {
+  .navbarRight {
+    display: none;
+  }
+  .navbarRightMobil {
+    display: flex;
+    align-items: center;
+    
+  }
+}
 @media screen and (max-width: 768px) {
   .navbar {
-    padding: 4px 0.8rem;
+    padding: 4px 1.4rem 4px 1.2rem;
   }
   .navbarLeft {
-    :nth-child(2) {
+    .iconProfile {
       margin: 0 13px 0 6px;
     }
     :nth-child(3) {
@@ -68,7 +82,7 @@
     }
   }
   .btnUpload {
-    display: none
+    display: none;
   }
   .navbarRight {
     display: none;
@@ -77,8 +91,7 @@
     display: flex;
     align-items: center;
     :nth-child(1) {
-      margin: 0 15px;
+      margin: 0 25px;
     }
   }
 }
-

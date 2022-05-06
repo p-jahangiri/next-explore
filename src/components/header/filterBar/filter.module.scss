@@ -4,7 +4,6 @@
   display: flex;
   justify-content: space-between;
   padding: 20px 12px 10px 20px;
-  
 }
 
 .menuBox {
@@ -36,6 +35,12 @@
 .branches {
   margin-top: 18px;
 }
+@media screen and (min-width: 1100px) {
+  .software {
+    display: flex;
+    margin: 0 7px;
+  }
+}
 
 @media screen and (min-width: 768px) {
   .menuBox {
@@ -48,19 +53,28 @@
     background-color: $color-gray;
     border-radius: 15px;
     padding: 0 8px;
+    
   }
-
   .filterBarRight {
     display: flex;
     align-items: center;
-   
-    
-  }
-  .software {
-    display: flex;
-    margin: 0 7px;
   }
   .branches {
     margin-top: 0;
+  }
+}
+@media screen and (min-width: 425px) {
+  .menuBox {
+    display: none;
+  }
+  .container {
+    align-items: center;
+    height: 4rem;
+    margin: 10px 50px 10px 48px;
+    border-radius: 15px;
+    padding: 0 8px;
+  }
+  .branches {
+    display: none;
   }
 }

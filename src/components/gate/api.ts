@@ -34,7 +34,7 @@ const call = async <T>(
   url: string,
   data: any = {}
 ): Promise<T> => {
-  const accessToken = localStorage.getItem("token");
+  const accessToken = "";
 
   const headers = {
     Accept: "application/json",
