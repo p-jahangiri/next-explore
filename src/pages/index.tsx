@@ -1,9 +1,8 @@
-import Head from "next/head";
 import s from "assets/styles/home.module.scss";
-import { Layout } from "components";
-import gate from "components/gate";
-import { ResponseGetProjectsDataType } from "components/gate/inerface/projects.interface";
-import Section from "components/section";
+import { Layout } from "layout";
+import gate from "../gate";
+import { ResponseGetProjectsDataType } from "../gate/inerface/projects.interface";
+import {Section} from "components/explore";
 interface HomePageProps {
   projects: ResponseGetProjectsDataType[];
 }

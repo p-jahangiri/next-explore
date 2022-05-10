@@ -17,6 +17,6 @@
     "jsx": "preserve"
   },
 
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "./custom.d.ts"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "./custom.d.ts", "src/components/section/cardSingle/index.tsx", "src/components/section/index.tsx"],
   "exclude": ["node_modules"]
 }

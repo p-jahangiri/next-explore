@@ -1,6 +1,6 @@
-// import "../assets/styles/globals.css";
+import "../assets/styles/globals.css";
 import { Provider } from "react-redux";
-import { store } from "../states";
+import { store } from "../store";
 import 'assets/styles/globals.css'; 
 function MyApp({ Component, pageProps }) {
   return (

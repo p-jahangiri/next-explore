@@ -1,0 +1,123 @@
+.container {
+  background-color: #1c242b;
+  padding: 0 40px;
+  margin-top: 40px;
+}
+
+.contact {
+  margin: 0 -40px;
+  padding-right: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #707070;
+}
+
+.contact h5 {
+  margin-right: 2.8rem;
+  font-size: 15px;
+  color: white;
+  cursor: pointer;
+}
+
+.logo {
+  margin-top: 40px;
+}
+
+.logo img {
+  margin-left: 30px;
+}
+
+.text {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  direction: rtl;
+  color: white;
+}
+
+.text p {
+  line-height: 1.6;
+  letter-spacing: 1.5px;
+}
+
+@media screen and (max-width: 425px) {
+  .container {
+    background-color: #1c242b;
+  }
+  .contact {
+    direction: rtl;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    background-color: transparent;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-right: -110px;
+  }
+  .contact h5 {
+    font-size: 12px;
+  }
+  .logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 40px;
+  }
+  .logo img {
+    margin-left: 30px;
+  }
+  .text {
+    margin-top: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .text p {
+    font-size: 7px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .contact {
+    padding-top: 20px;
+  }
+  .contact h3 {
+    font-size: 17px;
+  }
+  .section {
+    -ms-grid-columns: auto auto;
+        grid-template-columns: auto auto;
+  }
+  .text {
+    width: full;
+    padding: 30px;
+    height: 50px;
+  }
+  .text h4 {
+    font-size: 9px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .section {
+    -ms-grid-columns: auto auto auto;
+        grid-template-columns: auto auto auto;
+  }
+}
+/*# sourceMappingURL=footer.module.css.map */
