@@ -6,7 +6,7 @@ import Eay from "assets/svg/eay.svg";
 import Profile from "assets/svg/profileImg.svg";
 import { useSelector } from "react-redux";
 import { getViewMode } from "store/selectors/filter";
-import { ResponseGetProjectsDataType } from "../gate/inerface/projects.interface";
+import {ResponseGetProjectsDataType } from "gate/inerface/projects.interface";
 
 export default function Card({
   project,
